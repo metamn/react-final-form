@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Form from "react-jsonschema-form";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const schema = {
   title: "Todo",
