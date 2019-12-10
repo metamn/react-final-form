@@ -14,3 +14,13 @@ Playin' with React form libraries.
 - Incomplete / airy docs
 - Renderprops syntax
 - No examples with hooks
+
+## Formik
+
+- https://jaredpalmer.com/formik/
+
+### Pro
+
+### Con
+
+- The simplest text input example gives and error when typing in the text
