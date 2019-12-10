@@ -21,7 +21,10 @@ The goal is:
 
 4. Extendable
 
-- The whole business logic mut be customizable
+- The whole business logic mut be customizable, like:
+  - Adding query param support
+  - Connected forms: a field value determines the state of the other field values
+  - Internationalized
 
 ## Final Form
 
