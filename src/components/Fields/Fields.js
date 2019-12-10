@@ -24,12 +24,24 @@ const Fields = props => {
           console.log("Submit");
         }}
         render={() => (
-          <Field
-            name="text"
-            component="input"
-            type="text"
-            placeholder="Text input"
-          />
+          <>
+            <p>
+              <Field
+                name="text"
+                component="input"
+                type="text"
+                placeholder="Text input"
+              />
+            </p>
+            <p>
+              <Field
+                name="button"
+                component="input"
+                type="button"
+                value="Button input"
+              />
+            </p>
+          </>
         )}
       ></Form>
     </div>
