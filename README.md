@@ -61,11 +61,14 @@ The goal is to find / build / combine something which:
 ## react-jsonschema-form
 
 - https://github.com/rjsf-team/react-jsonschema-form
+- Supported input types: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/core/src/components/widgets
+- Supported data types: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/core/src/components/fields
 
 ### Pro
 
 - Declarative form syntax including schema for data, ui, errors / validations
 - Supports Bootstrap out of the box, plus Material UI: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/material-ui
+- built by Mozilla:
 
 ### Con
 
