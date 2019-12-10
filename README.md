@@ -1,6 +1,27 @@
-#react-forms
+# react-forms
 
 Playin' with React form libraries.
+
+## Goal
+
+The goal is:
+
+1. Describe the form via JSON
+
+- All input fields has to be supported
+- Grouping has to be supported
+
+2. Auto generate the form fields using a theme (Material UI, Boostrap, etc.)
+
+- Every aspect of the theme must be customizable
+
+3. Validation and error messaging
+
+- Done automatically from the schema
+
+4. Extendable
+
+- The whole business logic mut be customizable
 
 ## Final Form
 
