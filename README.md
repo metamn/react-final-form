@@ -61,8 +61,10 @@ The goal is to find / build / combine something which:
 ## react-jsonschema-form
 
 - https://github.com/rjsf-team/react-jsonschema-form
-- Supported input types: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/core/src/components/widgets
-- Supported data types: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/core/src/components/fields
+- Features:
+  - https://rjsf-team.github.io/react-jsonschema-form/
+  - Supported input types: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/core/src/components/widgets
+  - Supported data types: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/core/src/components/fields
 
 ### Pro
 
