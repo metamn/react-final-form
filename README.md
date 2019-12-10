@@ -26,6 +26,24 @@ The goal is to find / build / combine something which:
   - Connected fields: a field value determines the state of the other field values
   - Internationalization
 
+## react-jsonschema-form
+
+- https://github.com/rjsf-team/react-jsonschema-form
+- Features:
+  - https://rjsf-team.github.io/react-jsonschema-form/
+  - Supported input types: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/core/src/components/widgets
+  - Supported data types: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/core/src/components/fields
+
+### Pro
+
+- Declarative form syntax including schema for data, ui, errors / validations
+- Supports Bootstrap out of the box, plus Material UI: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/material-ui
+- built by Mozilla:
+
+### Con
+
+- Seems having more features than necessary (for simple use cases)
+
 ## Final Form
 
 - https://final-form.org/react
@@ -57,21 +75,3 @@ The goal is to find / build / combine something which:
 - Cannot use proptypes for validations: https://github.com/jaredpalmer/formik/issues/1424 ... Yup is preferred ...
 - A very few examples only
 - An one man show
-
-## react-jsonschema-form
-
-- https://github.com/rjsf-team/react-jsonschema-form
-- Features:
-  - https://rjsf-team.github.io/react-jsonschema-form/
-  - Supported input types: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/core/src/components/widgets
-  - Supported data types: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/core/src/components/fields
-
-### Pro
-
-- Declarative form syntax including schema for data, ui, errors / validations
-- Supports Bootstrap out of the box, plus Material UI: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/material-ui
-- built by Mozilla:
-
-### Con
-
-- Seems having more features than necessary (for simple use cases)
