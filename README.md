@@ -4,27 +4,27 @@ Playin' with React form libraries.
 
 ## Goal
 
-The goal is:
+The goal is to find / build / combine something which:
 
-1. Describe the form via JSON
+1. Describes the form via JSON
 
 - All input fields has to be supported
-- Grouping has to be supported
+- Grouping and sub-grouping has to be supported
 
-2. Auto generate the form fields using a theme (Material UI, Boostrap, etc.)
+2. Auto generates the form fields using a theme (Material UI, Bootstrap, self made, etc.)
 
 - Every aspect of the theme must be customizable
 
-3. Validation and error messaging
+3. Does validation and error messaging
 
 - Done automatically from the schema
 
-4. Extendable
+4. Is extendable
 
 - The whole business logic mut be customizable, like:
   - Adding query param support
-  - Connected forms: a field value determines the state of the other field values
-  - Internationalized
+  - Connected fields: a field value determines the state of the other field values
+  - Internationalization
 
 ## Final Form
 
