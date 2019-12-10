@@ -1,15 +1,9 @@
 import React from "react";
 
-import Simple from "./components/Simple";
-import ValidateForm from "./components/ValidateForm";
+import Fields from "./components/Fields";
 
 const App = () => {
-  return (
-    <>
-      <Simple />
-      <ValidateForm />
-    </>
-  );
+  return <Fields />;
 };
 
 export default App;
