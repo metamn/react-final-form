@@ -1,9 +1,9 @@
 import React from "react";
 
-import Fields from "./components/Fields";
+import FinalForm from "./components/FinalForm";
 
 const App = () => {
-  return <Fields />;
+  return <FinalForm />;
 };
 
 export default App;

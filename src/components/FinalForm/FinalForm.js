@@ -16,9 +16,9 @@ const defaultProps = {};
 /**
  * Displays the component
  */
-const Fields = props => {
+const FinalForm = props => {
   return (
-    <div className="Fields">
+    <div className="FinalForm">
       <Form
         onSubmit={() => {
           console.log("Submit");
@@ -48,8 +48,11 @@ const Fields = props => {
   );
 };
 
-Fields.propTypes = propTypes;
-Fields.defaultProps = defaultProps;
+FinalForm.propTypes = propTypes;
+FinalForm.defaultProps = defaultProps;
 
-export default Fields;
-export { propTypes as FieldsPropTypes, defaultProps as FieldsDefaultProps };
+export default FinalForm;
+export {
+  propTypes as FinalFormPropTypes,
+  defaultProps as FinalFormDefaultProps
+};
