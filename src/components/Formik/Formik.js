@@ -20,19 +20,37 @@ const FormikT = props => {
   return (
     <div className="Formik">
       <Formik
-        onSubmit={() => {
-          console.log("Submit");
+        initialValues={{ email: "", password: "" }}
+        onSubmit={(values, { setSubmitting }) => {
+          setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+            setSubmitting(false);
+          }, 400);
         }}
       >
-        {({}) => (
-          <Form>
-            <p>
-              <Field type="text" name="text" />
-            </p>
-            <p>
-              <button type="submit">Submit</button>
-            </p>
-          </Form>
+        {({
+          values,
+          errors,
+          touched,
+          handleChange,
+          handleBlur,
+          handleSubmit,
+          isSubmitting
+          /* and other goodies */
+        }) => (
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="email"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.email}
+            />
+
+            <button type="submit" disabled={isSubmitting}>
+              Submit
+            </button>
+          </form>
         )}
       </Formik>
     </div>
