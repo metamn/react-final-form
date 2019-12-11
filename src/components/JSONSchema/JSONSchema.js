@@ -20,13 +20,28 @@ const schema = {
       enum: ["Individual", "Group"]
     },
     location: {
-      type: "array",
+      type: "object",
       title: "Location",
-      items: {
-        type: "string",
-        enum: ["Canada", "Mexico", "US"]
-      },
-      uniqueItems: "true"
+      properties: {
+        northAmerica: {
+          type: "array",
+          title: "North America",
+          items: {
+            type: "string",
+            enum: ["Canada", "Mexico", "US"]
+          },
+          uniqueItems: "true"
+        },
+        europe: {
+          type: "array",
+          title: "Europe",
+          items: {
+            type: "string",
+            enum: ["France", "Italy", "UK"]
+          },
+          uniqueItems: "true"
+        }
+      }
     },
     sector: {
       type: "array",
@@ -78,7 +93,12 @@ const uiSchema = {
     "ui:widget": "radio"
   },
   location: {
-    "ui:widget": "checkboxes"
+    northAmerica: {
+      "ui:widget": "checkboxes"
+    },
+    europe: {
+      "ui:widget": "checkboxes"
+    }
   },
   sector: {
     "ui:widget": "checkboxes"
