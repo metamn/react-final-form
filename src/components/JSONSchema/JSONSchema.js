@@ -1,39 +1,57 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import Form from "react-jsonschema-form";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+const log = type => console.log.bind(console, type);
+
 const schema = {
-  title: "Todo",
+  title: "Wakibi",
   type: "object",
-  required: ["title"],
   properties: {
-    title: { type: "string", title: "Title", default: "A new task" },
-    done: { type: "boolean", title: "Done?", default: false }
+    gender: {
+      type: "string",
+      title: "Gender",
+      enum: ["Women", "Men"]
+    },
+    grouped: {
+      type: "string",
+      title: "Group",
+      enum: ["Individual", "Group"]
+    },
+    location: {
+      type: "array",
+      title: "Location",
+      items: {
+        type: "string",
+        enum: ["Canada", "Mexico", "US"]
+      },
+      uniqueItems: "true"
+    }
   }
 };
 
-const log = type => console.log.bind(console, type);
-
-/**
- * Defines the prop types
- */
-const propTypes = {};
-
-/**
- * Defines the default props
- */
-const defaultProps = {};
+const uiSchema = {
+  gender: {
+    "ui:widget": "radio"
+  },
+  grouped: {
+    "ui:widget": "radio"
+  },
+  location: {
+    "ui:widget": "checkboxes"
+  }
+};
 
 /**
  * Displays the component
  */
 const JSONSchema = props => {
   return (
-    <div className="JSONSchema">
+    <div className="JSONSchema" style={{ padding: "1em", margin: "1em" }}>
       <Form
         schema={schema}
+        uiSchema={uiSchema}
         onChange={log("changed")}
         onSubmit={log("submitted")}
         onError={log("errors")}
@@ -42,11 +60,4 @@ const JSONSchema = props => {
   );
 };
 
-JSONSchema.propTypes = propTypes;
-JSONSchema.defaultProps = defaultProps;
-
 export default JSONSchema;
-export {
-  propTypes as JSONSchemaPropTypes,
-  defaultProps as JSONSchemaDefaultProps
-};

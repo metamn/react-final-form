@@ -1,5 +1,1 @@
-export {
-  default,
-  JSONSchemaPropTypes,
-  JSONSchemaDefaultProps
-} from "./JSONSchema";
+export { default } from "./JSONSchema";
