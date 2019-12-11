@@ -3,6 +3,9 @@ import React from "react";
 import Form from "react-jsonschema-form";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import { useLocation, useHistory } from "react-router-dom";
+import queryString from "query-string";
+
 const schema = {
   title: "Wakibi",
   type: "object",
@@ -117,20 +120,32 @@ const uiSchema = {
 
 const log = type => console.log.bind(console, type);
 
+const onChange = (event, location, history) => {
+  const { formData } = event;
+  console.log("fd:", formData);
+
+  const newParams = queryString.stringify(formData);
+  location.search = newParams;
+  console.log("l:", location);
+  history.push(location);
+};
+
 /**
  * Displays the component
  */
 const JSONSchema = props => {
-  const onChange = event => {
-    console.log("changed:", event);
-  };
+  const location = useLocation();
+  const history = useHistory();
+
+  //console.log("location:", location);
+  console.log("qs:", queryString.parse(location.search));
 
   return (
     <div className="JSONSchema" style={{ padding: "1em", margin: "1em" }}>
       <Form
         schema={schema}
         uiSchema={uiSchema}
-        onChange={event => onChange(event)}
+        onChange={event => onChange(event, location, history)}
         onSubmit={log("submitted")}
         onError={log("errors")}
       />
