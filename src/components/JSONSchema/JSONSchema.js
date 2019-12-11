@@ -3,8 +3,6 @@ import React from "react";
 import Form from "react-jsonschema-form";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const log = type => console.log.bind(console, type);
-
 const schema = {
   title: "Wakibi",
   type: "object",
@@ -117,16 +115,22 @@ const uiSchema = {
   }
 };
 
+const log = type => console.log.bind(console, type);
+
 /**
  * Displays the component
  */
 const JSONSchema = props => {
+  const onChange = event => {
+    console.log("changed:", event);
+  };
+
   return (
     <div className="JSONSchema" style={{ padding: "1em", margin: "1em" }}>
       <Form
         schema={schema}
         uiSchema={uiSchema}
-        onChange={log("changed")}
+        onChange={event => onChange(event)}
         onSubmit={log("submitted")}
         onError={log("errors")}
       />
