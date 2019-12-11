@@ -27,6 +27,45 @@ const schema = {
         enum: ["Canada", "Mexico", "US"]
       },
       uniqueItems: "true"
+    },
+    sector: {
+      type: "array",
+      title: "Sector",
+      items: {
+        type: "number",
+        enum: ["Agriculture", "Economy", "IT"]
+      },
+      uniqueItems: "true"
+    },
+    attributes: {
+      type: "array",
+      title: "Sector",
+      items: {
+        type: "number",
+        enum: ["Green", "Higher Education", "Islamic Finance"]
+      },
+      uniqueItems: "true"
+    },
+    tags: {
+      type: "array",
+      title: "Tags",
+      items: {
+        type: "number",
+        enum: ["Animals", "Elderly", "Unique", "Gabrics"]
+      },
+      uniqueItems: "true"
+    },
+    riskRating: {
+      type: "integer",
+      title: "Risk rating",
+      minimum: 0,
+      maximum: 5
+    },
+    profitability: {
+      type: "integer",
+      title: "Profitability",
+      minimum: -55,
+      maximum: 66
     }
   }
 };
@@ -40,6 +79,21 @@ const uiSchema = {
   },
   location: {
     "ui:widget": "checkboxes"
+  },
+  sector: {
+    "ui:widget": "checkboxes"
+  },
+  attributes: {
+    "ui:widget": "checkboxes"
+  },
+  tags: {
+    "ui:widget": "checkboxes"
+  },
+  riskRating: {
+    "ui:widget": "range"
+  },
+  profitability: {
+    "ui:widget": "range"
   }
 };
 
