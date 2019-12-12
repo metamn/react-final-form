@@ -1,4 +1,5 @@
 import React from "react";
+import { isEmpty, flattenDeep } from "lodash";
 
 import Form from "react-jsonschema-form";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -55,7 +56,7 @@ const schema = {
     },
     attributes: {
       type: "array",
-      title: "Sector",
+      title: "Attributes",
       items: {
         type: "number",
         enum: ["Green", "Higher Education", "Islamic Finance"]
@@ -124,9 +125,17 @@ const onChange = (event, location, history) => {
   const { formData } = event;
   console.log("fd:", formData);
 
-  const newParams = queryString.stringify(formData);
+  const filteredFormData = flattenDeep(formData);
+  console.log("ddf:", filteredFormData);
+
+  const newParams = queryString.stringify(filteredFormData, {
+    skipNull: true,
+    arrayFormat: "comma"
+  });
+
   location.search = newParams;
   console.log("l:", location);
+
   history.push(location);
 };
 
@@ -136,9 +145,9 @@ const onChange = (event, location, history) => {
 const JSONSchema = props => {
   const location = useLocation();
   const history = useHistory();
+  const { search } = location;
 
-  //console.log("location:", location);
-  console.log("qs:", queryString.parse(location.search));
+  console.log("qs:", queryString.parse(search));
 
   return (
     <div className="JSONSchema" style={{ padding: "1em", margin: "1em" }}>
@@ -146,6 +155,7 @@ const JSONSchema = props => {
         schema={schema}
         uiSchema={uiSchema}
         onChange={event => onChange(event, location, history)}
+        //onChange={log("changed")}
         onSubmit={log("submitted")}
         onError={log("errors")}
       />
