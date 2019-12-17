@@ -27,19 +27,15 @@ const schema = {
           type: "array",
           title: "North America",
           items: {
-            type: "string",
+            type: "number",
             enum: ["Canada", "Mexico", "US"]
           },
           uniqueItems: true
         },
         europe: {
-          type: "array",
+          type: "string",
           title: "Europe",
-          items: {
-            type: "string",
-            enum: ["France", "Italy", "UK"]
-          },
-          uniqueItems: true
+          enum: ["France", "Italy", "UK"]
         }
       }
     },
@@ -47,29 +43,21 @@ const schema = {
       type: "array",
       title: "Sector",
       items: {
-        type: "number",
-        enum: ["1", "2", "3"],
-        enumNames: ["Agriculture", "Economy", "IT"]
-      },
-      uniqueItems: true
+        type: "string",
+        enum: ["Agriculture", "Economy", "IT"]
+      }
     },
     attributes: {
-      type: "array",
+      type: "number",
       title: "Attributes",
-      items: {
-        type: "number",
-        enum: ["1", "2", "3"],
-        enumNames: ["Green", "Higher Education", "Islamic Finance"]
-      },
-      uniqueItems: true
+      enum: ["Green", "Higher Education", "Islamic Finance"]
     },
     tags: {
       type: "array",
       title: "Tags",
       items: {
         type: "number",
-        enum: ["1", "2", "3", "4"],
-        enumNames: ["Animals", "Elderly", "Unique", "Fabrics"]
+        enum: ["1", "2", "3", "4"]
       },
       uniqueItems: true
     },
