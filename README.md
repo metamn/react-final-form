@@ -26,6 +26,19 @@ The goal is to find / build / combine something which:
   - Adding query param support
   - Connected fields: a field value determines the state of the other field values
 
+## Summary
+
+- There is a promising approach (https://json-schema.org/) to describe the form (and more, even a complete UI) via JSON in a framework / language agnostic way
+- This would be ideal: define the UI in JSON, implement today in React, tomorrow with another framework. Even more, define the UI and the backend team can create the API serving the UI based on this JSON Schema
+- The two most popular JS implementations found are:
+
+  - full of unsolved issues
+  - lack of working examples
+  - lack of documentation
+  - not clear if somebody ever used in production
+
+- It seems the idea is good but no big company / contributor invested in implementation, just single maintainers, whom are clearly overwhelmed by the details and the complexity of the problem.
+
 ## uniforms
 
 - https://uniforms.tools/
