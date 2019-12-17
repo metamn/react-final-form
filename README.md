@@ -38,6 +38,7 @@ The goal is to find / build / combine something which:
   - not clear if somebody ever used in production
 
 - It seems the idea is good but no big company / contributor invested in implementation, just single maintainers, whom are clearly overwhelmed by the details and the complexity of the problem.
+- The most advanced investment comes from Cloudflare: https://github.com/cloudflare/json-schema-tools and the solution have not yet reached a stable interface.
 
 ## uniforms
 
