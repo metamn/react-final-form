@@ -29,16 +29,26 @@ The goal is to find / build / combine something which:
 ## Summary
 
 - There is a promising approach (https://json-schema.org/) to describe the form (and more, even a complete UI) via JSON in a framework / language agnostic way
-- This would be ideal: define the UI in JSON, implement today in React, tomorrow with another framework. Even more, define the UI and the backend team can create the API serving the UI based on this JSON Schema
+- This would be ideal: define the UI in JSON, implement today in React, tomorrow with another framework. Even more, define the UI and the backend team can create the API serving the UI based on this JSON Schema.
+- This idea is taken further, ie. there is a Typescript-to-JSON-Schema converter, or a GraphQL-to-Forms generator. They all respond to the same problem: have a standard data description and then generate static types, UI controls from it, instead of writing the code manually all the time
 - The two most popular JS implementations found are:
 
-  - full of unsolved issues
-  - lack of working examples
-  - lack of documentation
-  - not clear if somebody ever used in production
+  - Full of unsolved issues
+  - Lack of working examples
+  - Lack of proper documentation
+  - Not clear if somebody ever used in production
 
 - It seems the idea is good but no big company / contributor invested in implementation, just single maintainers, whom are clearly overwhelmed by the details and the complexity of the problem.
 - The most advanced investment comes from Cloudflare: https://github.com/cloudflare/json-schema-tools and the solution have not yet reached a stable interface.
+
+### OpenAPI
+
+- it's similar to JSON Schema but more extended supporting REST web services
+
+### Resources
+
+- https://apisyouwonthate.com/blog/the-many-amazing-uses-of-json-schema-client-side-validation
+- https://stoplight.io/blog/openapi-json-schema/
 
 ## uniforms
 
