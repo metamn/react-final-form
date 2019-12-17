@@ -10,27 +10,28 @@ The goal is to find / build / combine something which:
 
 - All input fields has to be supported
 - Grouping and sub-grouping has to be supported
+- Internationalization has to be supported
 
 2. Auto generates the form fields using a theme (Material UI, Bootstrap, self made, etc.)
 
-- Every aspect of the theme must be customizable
+- Every aspect of the theme must be customizable: Input group headers, Group headers, ...
 
 3. Does validation and error messaging
 
 - Done automatically from the schema
 
-4. Is extendable
+4. Business logic is extendable
 
 - The whole business logic mut be customizable, like:
   - Adding query param support
   - Connected fields: a field value determines the state of the other field values
-  - Internationalization
 
 ## react-jsonschema-form
 
 - https://github.com/rjsf-team/react-jsonschema-form
 - Features:
   - https://rjsf-team.github.io/react-jsonschema-form/
+  - https://react-jsonschema-form.readthedocs.io/en/latest/#tips-and-tricks
   - Supported input types: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/core/src/components/widgets
   - Supported data types: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/core/src/components/fields
 
@@ -38,11 +39,14 @@ The goal is to find / build / combine something which:
 
 - Declarative form syntax including schema for data, ui, errors / validations
 - Supports Bootstrap out of the box, plus Material UI: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/material-ui
-- built by Mozilla:
+- built by / for Mozilla ? ("It is a major component in the kinto-admin project.")
+- built on standards (https://json-schema.org/) which can describe more than forms - even complete UIs with media elements => might be a useful tool on long term
 
 ### Con
 
 - Seems having more features than necessary (for simple use cases)
+- Very unfriendly docs
+- Very unfriendly contributor:
 
 ## Final Form
 

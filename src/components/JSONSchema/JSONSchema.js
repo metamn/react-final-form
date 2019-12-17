@@ -50,7 +50,8 @@ const schema = {
       title: "Sector",
       items: {
         type: "number",
-        enum: ["Agriculture", "Economy", "IT"]
+        enum: ["1", "2", "3"],
+        enumNames: ["Agriculture", "Economy", "IT"]
       },
       uniqueItems: "true"
     },
@@ -59,7 +60,8 @@ const schema = {
       title: "Attributes",
       items: {
         type: "number",
-        enum: ["Green", "Higher Education", "Islamic Finance"]
+        enum: ["1", "2", "3"],
+        enumNames: ["Green", "Higher Education", "Islamic Finance"]
       },
       uniqueItems: "true"
     },
@@ -68,7 +70,8 @@ const schema = {
       title: "Tags",
       items: {
         type: "number",
-        enum: ["Animals", "Elderly", "Unique", "Gabrics"]
+        enum: ["1", "2", "3", "4"],
+        enumNames: ["Animals", "Elderly", "Unique", "Fabrics"]
       },
       uniqueItems: "true"
     },
@@ -125,18 +128,18 @@ const onChange = (event, location, history) => {
   const { formData } = event;
   console.log("fd:", formData);
 
-  const filteredFormData = flattenDeep(formData);
-  console.log("ddf:", filteredFormData);
+  const filteredFormData = formData;
+  //console.log("ddf:", filteredFormData);
 
   const newParams = queryString.stringify(filteredFormData, {
     skipNull: true,
     arrayFormat: "comma"
   });
 
-  location.search = newParams;
-  console.log("l:", location);
+  //location.search = newParams;
+  //console.log("l:", location);
 
-  history.push(location);
+  //history.push(location);
 };
 
 /**
@@ -147,7 +150,7 @@ const JSONSchema = props => {
   const history = useHistory();
   const { search } = location;
 
-  console.log("qs:", queryString.parse(search));
+  //console.log("qs:", queryString.parse(search));
 
   return (
     <div className="JSONSchema" style={{ padding: "1em", margin: "1em" }}>
