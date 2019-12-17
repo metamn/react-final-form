@@ -19,45 +19,14 @@ const schema = {
       title: "Group",
       enum: ["Individual", "Group"]
     },
-    location: {
-      type: "object",
-      title: "Location",
-      properties: {
-        northAmerica: {
-          type: "array",
-          title: "North America",
-          items: {
-            type: "number",
-            enum: ["Canada", "Mexico", "US"]
-          },
-          uniqueItems: true
-        },
-        europe: {
-          type: "string",
-          title: "Europe",
-          enum: ["France", "Italy", "UK"]
-        }
-      }
-    },
-    sector: {
+    check: {
       type: "array",
-      title: "Sector",
       items: {
         type: "string",
-        enum: ["Agriculture", "Economy", "IT"]
-      }
-    },
-    attributes: {
-      type: "number",
-      title: "Attributes",
-      enum: ["Green", "Higher Education", "Islamic Finance"]
-    },
-    tags: {
-      type: "array",
-      title: "Tags",
-      items: {
-        type: "number",
-        enum: ["1", "2", "3", "4"]
+        enum: ["choice 1", "choice 2"],
+        uniforms: {
+          checkboxes: true
+        }
       },
       uniqueItems: true
     },
