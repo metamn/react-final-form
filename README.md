@@ -26,6 +26,12 @@ The goal is to find / build / combine something which:
   - Adding query param support
   - Connected fields: a field value determines the state of the other field values
 
+## uniforms
+
+- https://uniforms.tools/
+- compared to others: https://uniforms.tools/docs/compare-matrix
+- it supports more formats (JSON Schema, GraphQL) and more themes than any other library
+
 ## react-jsonschema-form
 
 - https://github.com/rjsf-team/react-jsonschema-form
@@ -39,14 +45,15 @@ The goal is to find / build / combine something which:
 
 - Declarative form syntax including schema for data, ui, errors / validations
 - Supports Bootstrap out of the box, plus Material UI: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/material-ui
-- built by / for Mozilla ? ("It is a major component in the kinto-admin project.")
-- built on standards (https://json-schema.org/) which can describe more than forms - even complete UIs with media elements => might be a useful tool on long term
+- Built by / for Mozilla ? ("It is a major component in the kinto-admin project.")
+- Built on standards (https://json-schema.org/) which can describe more than forms - even complete UIs with media elements => might be a useful tool on long term
+- JSON Schema is cross-language: https://json-schema.org/implementations.html
 
 ### Con
 
 - Seems having more features than necessary (for simple use cases)
 - Very unfriendly docs
-- Very unfriendly contributor:
+- Very unfriendly main contributor:
 
 ## Final Form
 
