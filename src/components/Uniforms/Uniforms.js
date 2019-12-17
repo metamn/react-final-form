@@ -25,7 +25,7 @@ const schema = {
         type: "string",
         enum: ["choice 1", "choice 2"],
         uniforms: {
-          checkboxes: true
+          checkboxes: "true"
         }
       },
       uniqueItems: true

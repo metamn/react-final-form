@@ -40,6 +40,7 @@ The goal is to find / build / combine something which:
 ### Con
 
 - Nothing really works with these JSON Schema libraries: can't really define a set of checkboxes properly, and/or, the API documentation is missing or incomplete: https://github.com/vazco/uniforms/issues/517 See also `react-jsonschema-form`
+- The API doesn't supports the ... `checkbox` input type ... https://uniforms.tools/docs/api-fields
 
 ## react-jsonschema-form
 
