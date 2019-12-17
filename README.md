@@ -35,6 +35,7 @@ The goal is to find / build / combine something which:
 - Compared to others: https://uniforms.tools/docs/compare-matrix
 - It supports more formats (JSON Schema, GraphQL) and more themes than any other library
 - It seems to be well maintained (13 open issues, 469 closed)
+- Docs are clear
 
 ## react-jsonschema-form
 

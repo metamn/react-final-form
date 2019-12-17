@@ -88,6 +88,22 @@ const schema = {
   }
 };
 
+const schema2 = {
+  title: "Guest",
+  type: "object",
+  properties: {
+    firstName: { type: "string" },
+    lastName: { type: "string" },
+    workExperience: {
+      description: "Work experience in years",
+      type: "integer",
+      minimum: 0,
+      maximum: 100
+    }
+  },
+  required: ["firstName", "lastName"]
+};
+
 /**
  * @see https://uniforms.tools/docs/tutorials-basic-uniforms-usage
  */
