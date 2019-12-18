@@ -54,10 +54,7 @@ The goal is to find / build / combine something which:
 
 - https://github.com/rjsf-team/react-jsonschema-form
 - Features:
-  - https://rjsf-team.github.io/react-jsonschema-form/
-  - https://react-jsonschema-form.readthedocs.io/en/latest/#tips-and-tricks
-  - Supported input types: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/core/src/components/widgets
-  - Supported data types: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/core/src/components/fields
+  - https://react-jsonschema-form.readthedocs.io/en/latest/form-customization/
 
 ### Pro
 
