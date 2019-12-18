@@ -46,19 +46,33 @@ const schema = {
 };
 
 const schema2 = {
-  title: "Guest",
   type: "object",
   properties: {
-    firstName: { type: "string" },
-    lastName: { type: "string" },
-    workExperience: {
-      description: "Work experience in years",
-      type: "integer",
-      minimum: 0,
-      maximum: 100
+    impact: {
+      type: "array",
+      title: "Select impacts:",
+      items: {
+        type: "string"
+      },
+      options: [
+        {
+          label: "Impact One",
+          value: "Impact One"
+        },
+        {
+          label: "Impact Two",
+          value: "Impact Two"
+        },
+        {
+          label: "Impact Three",
+          value: "Impact Three"
+        }
+      ],
+      uniforms: {
+        checkboxes: true
+      }
     }
-  },
-  required: ["firstName", "lastName"]
+  }
 };
 
 /**
@@ -66,8 +80,8 @@ const schema2 = {
  */
 const ajv = new Ajv({ allErrors: true, useDefaults: true });
 
-function createValidator(schema) {
-  const validator = ajv.compile(schema);
+function createValidator(schema2) {
+  const validator = ajv.compile(schema2);
 
   return model => {
     validator(model);
@@ -82,8 +96,8 @@ function createValidator(schema) {
  * Displays the component
  */
 const Uniforms = props => {
-  const schemaValidator = createValidator(schema);
-  const validatedSchema = new JSONSchemaBridge(schema, schemaValidator);
+  const schemaValidator = createValidator(schema2);
+  const validatedSchema = new JSONSchemaBridge(schema2, schemaValidator);
 
   return (
     <div className="Uniforms">

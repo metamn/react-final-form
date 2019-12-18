@@ -63,8 +63,8 @@ The goal is to find / build / combine something which:
 
 ### Con
 
-- Nothing really works with these JSON Schema libraries: can't really define a set of checkboxes properly, and/or, the API documentation is missing or incomplete: https://github.com/vazco/uniforms/issues/517 See also `react-jsonschema-form`
 - The API doesn't supports the ... `checkbox` input type ... https://uniforms.tools/docs/api-fields
+- Syntax is ambiguous and the generated code is full of errors: https://github.com/vazco/uniforms/issues/671, https://github.com/vazco/uniforms/issues/670, https://github.com/vazco/uniforms/issues/669
 
 ## react-jsonschema-form
 
