@@ -50,6 +50,26 @@ The goal is to find / build / combine something which:
 - https://apisyouwonthate.com/blog/the-many-amazing-uses-of-json-schema-client-side-validation
 - https://stoplight.io/blog/openapi-json-schema/
 
+## react-jsonschema-form
+
+- https://github.com/rjsf-team/react-jsonschema-form
+- Features:
+  - https://rjsf-team.github.io/react-jsonschema-form/
+  - https://react-jsonschema-form.readthedocs.io/en/latest/#tips-and-tricks
+  - Supported input types: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/core/src/components/widgets
+  - Supported data types: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/core/src/components/fields
+
+### Pro
+
+- Declarative form syntax including schema for data, ui, errors / validations
+- Supports Bootstrap out of the box, plus Material UI: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/material-ui
+- Built by / for Mozilla ? ("It is a major component in the kinto-admin project.")
+
+### Con
+
+- Seems having more features than necessary (for simple use cases)
+- Incomplete docs: https://github.com/rjsf-team/react-jsonschema-form/issues/1543
+
 ## uniforms
 
 - https://uniforms.tools/
@@ -65,29 +85,6 @@ The goal is to find / build / combine something which:
 
 - The API doesn't supports the ... `checkbox` input type ... https://uniforms.tools/docs/api-fields
 - Syntax is ambiguous and the generated code is full of errors: https://github.com/vazco/uniforms/issues/671, https://github.com/vazco/uniforms/issues/670, https://github.com/vazco/uniforms/issues/669
-
-## react-jsonschema-form
-
-- https://github.com/rjsf-team/react-jsonschema-form
-- Features:
-  - https://rjsf-team.github.io/react-jsonschema-form/
-  - https://react-jsonschema-form.readthedocs.io/en/latest/#tips-and-tricks
-  - Supported input types: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/core/src/components/widgets
-  - Supported data types: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/core/src/components/fields
-
-### Pro
-
-- Declarative form syntax including schema for data, ui, errors / validations
-- Supports Bootstrap out of the box, plus Material UI: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/material-ui
-- Built by / for Mozilla ? ("It is a major component in the kinto-admin project.")
-- Built on standards (https://json-schema.org/) which can describe more than forms - even complete UIs with media elements => might be a useful tool on long term
-- JSON Schema is cross-language: https://json-schema.org/implementations.html
-
-### Con
-
-- Seems having more features than necessary (for simple use cases)
-- Very unfriendly docs
-- Very unfriendly main contributor:
 
 ## Final Form
 
