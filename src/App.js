@@ -10,7 +10,7 @@ import Uniforms from "./components/Uniforms";
 const App = () => {
   return (
     <Router>
-      <Uniforms />
+      <JSONSchema />
     </Router>
   );
 };
