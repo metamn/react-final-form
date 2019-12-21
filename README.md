@@ -8,23 +8,22 @@ The goal is to find / build / combine something which:
 
 1. Describes the form via JSON
 
-- All input fields has to be supported
-- Grouping and sub-grouping has to be supported
-- Internationalization has to be supported
+1.1 All input fields has to be supported
+1.2 Grouping and sub-grouping has to be supported
+1.3 Internationalization has to be supported
 
 2. Auto generates the form fields using a theme (Material UI, Bootstrap, self made, etc.)
 
-- Every aspect of the theme must be customizable: Input group headers, Group headers, fields, ...
+2.1. Every aspect of the theme must be customizable: Input group headers, Group headers, fields, ...
 
 3. Does validation and error messaging
 
-- Done automatically from the schema
+3.1 Done automatically from the schema
 
 4. Business logic is extendable
 
-- The whole business logic must be customizable, like:
-  - Adding query param support
-  - Connected fields: a field value determines the state of the other field values
+4.1 Query param support
+4.2 Connected fields: a field value determines the state of the other field values
 
 ## 1. Describes the form via JSON
 
@@ -127,3 +126,5 @@ The goal is to find / build / combine something which:
 ### Query params support
 
 #### query-string
+
+#### use-query-params
