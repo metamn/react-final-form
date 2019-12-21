@@ -14,7 +14,7 @@ The goal is to find / build / combine something which:
 
 2. Auto generates the form fields using a theme (Material UI, Bootstrap, self made, etc.)
 
-- Every aspect of the theme must be customizable: Input group headers, Group headers, ...
+- Every aspect of the theme must be customizable: Input group headers, Group headers, fields, ...
 
 3. Does validation and error messaging
 
@@ -22,11 +22,13 @@ The goal is to find / build / combine something which:
 
 4. Business logic is extendable
 
-- The whole business logic mut be customizable, like:
+- The whole business logic must be customizable, like:
   - Adding query param support
   - Connected fields: a field value determines the state of the other field values
 
-## Summary
+## 1. Describes the form via JSON
+
+### JSON Schema
 
 - There is a promising approach (https://json-schema.org/) to describe the form (and more, even a complete UI) via JSON in a framework / language agnostic way
 - This would be ideal: define the UI in JSON, implement today in React, tomorrow with another framework. Even more, define the UI and the backend team can create the API serving the UI based on this JSON Schema.
@@ -41,74 +43,76 @@ The goal is to find / build / combine something which:
 - It seems the idea is good but no big company / contributor invested in implementation, just single maintainers, whom are clearly overwhelmed by the details and the complexity of the problem.
 - The most advanced investment comes from Cloudflare: https://github.com/cloudflare/json-schema-tools and the solution have not yet reached a stable interface.
 
-### OpenAPI
-
-- it's similar to JSON Schema but more extended supporting REST web services
-
-### Resources
-
-- https://apisyouwonthate.com/blog/the-many-amazing-uses-of-json-schema-client-side-validation
-- https://stoplight.io/blog/openapi-json-schema/
-
-## react-jsonschema-form
+#### react-jsonschema-form
 
 - https://github.com/rjsf-team/react-jsonschema-form
 - Features:
   - https://react-jsonschema-form.readthedocs.io/en/latest/form-customization/
 
-### Pro
+##### Pro
 
 - Declarative form syntax including schema for data, ui, errors / validations
 - Supports Bootstrap out of the box, plus Material UI: https://github.com/rjsf-team/react-jsonschema-form/tree/master/packages/material-ui
 - Built by / for Mozilla ? ("It is a major component in the kinto-admin project.")
 
-### Con
+##### Con
 
 - Seems having more features than necessary (for simple use cases)
 - Incomplete docs: https://github.com/rjsf-team/react-jsonschema-form/issues/1543
 
-## uniforms
+#### uniforms
 
 - https://uniforms.tools/
 
-### Pro
+##### Pro
 
 - Compared to others: https://uniforms.tools/docs/compare-matrix
 - It supports more formats (JSON Schema, GraphQL) and more themes than any other library
 - It seems to be well maintained (13 open issues, 469 closed)
 - ~Docs are clear~ at the first sight
 
-### Con
+##### Con
 
 - The API doesn't supports the ... `checkbox` input type ... https://uniforms.tools/docs/api-fields
 - Syntax is ambiguous and the generated code is full of errors: https://github.com/vazco/uniforms/issues/671, https://github.com/vazco/uniforms/issues/670, https://github.com/vazco/uniforms/issues/669
 
-## Final Form
+### OpenAPI
+
+- It's similar to JSON Schema but more extended supporting REST web services
+
+### Resources
+
+- https://apisyouwonthate.com/blog/the-many-amazing-uses-of-json-schema-client-side-validation
+- https://stoplight.io/blog/openapi-json-schema/
+
+## 2. Auto generates the form fields using a theme
+
+### Final Form
 
 - https://final-form.org/react
 - https://final-form.org/docs/react-final-form/examples
 
-### Pro
+#### Pro
 
 - It has a huge set of examples for various use cases
 - It seems to be highly adaptable / extendable
 
-### Con
+#### Con
 
 - Incomplete / airy docs
 - Renderprops syntax
 - No examples with hooks
 
-## Formik
+### Formik
 
 - https://jaredpalmer.com/formik/
 
-### Pro
+#### Pro
 
 - The first tutorial is done with hooks
 - It has a huge focus on validation
 
-### Con
+#### Con
 
 - The simplest text input example gives and error when typing in the text (it had no initial values set ...)
 - Cannot use proptypes for validations: https://github.com/jaredpalmer/formik/issues/1424 ... Yup is preferred ...
