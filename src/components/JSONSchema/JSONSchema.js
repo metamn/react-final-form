@@ -30,7 +30,8 @@ const schema = {
           title: "North America",
           items: {
             type: "string",
-            enum: ["Canada", "Mexico", "US"]
+            enum: ["ca", "mx", "us"],
+            enumNames: ["Canada", "Mexico", "US"]
           },
           uniqueItems: "true"
         },
@@ -39,7 +40,8 @@ const schema = {
           title: "Europe",
           items: {
             type: "string",
-            enum: ["France", "Italy", "UK"]
+            enum: ["fr", "it", "uk"],
+            enumNames: ["France", "Italy", "UK"]
           },
           uniqueItems: "true"
         }
