@@ -16,16 +16,17 @@ The goal is to find / build / combine something which:
 
 2. Auto generates the form fields using a theme (Material UI, Bootstrap, self made, etc.)
 
-2.1. Every aspect of the theme must be customizable: Input group headers, Group headers, fields, ...
+   2.1. Every aspect of the theme must be customizable: Input group headers, Group headers, fields, ...
 
 3. Does validation and error messaging
 
-3.1 Done automatically from the schema
+   3.1 Done automatically from the schema
 
 4. Business logic is extendable
 
-4.1 Query param support
-4.2 Connected fields: a field value determines the state of the other field values
+   4.1 Query param support
+
+   4.2 Connected fields: a field value determines the state of the other field values
 
 ## 1. Describes the form via JSON
 
