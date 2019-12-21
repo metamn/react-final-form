@@ -1,5 +1,5 @@
 import React from "react";
-import { isEmpty, flattenDeep } from "lodash";
+import { isEmpty } from "lodash";
 
 import Form from "react-jsonschema-form";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -128,20 +128,31 @@ const log = type => console.log.bind(console, type);
 
 const onChange = (event, location, history) => {
   const { formData } = event;
+
   console.log("fd:", formData);
 
-  const filteredFormData = formData;
-  //console.log("ddf:", filteredFormData);
+  /**
+   * Merging the location checkboxes into one single object
+   *
+   */
+  const filteredFormData = Object.keys(formData).reduce((acc, key) => {
+    const value = formData[key];
+
+    if (!isEmpty(value)) {
+      acc[key] = value;
+    }
+
+    return acc;
+  }, {});
 
   const newParams = queryString.stringify(filteredFormData, {
     skipNull: true,
     arrayFormat: "comma"
   });
 
-  //location.search = newParams;
-  //console.log("l:", location);
+  location.search = newParams;
 
-  //history.push(location);
+  history.push(location);
 };
 
 /**
@@ -151,14 +162,14 @@ const JSONSchema = props => {
   const location = useLocation();
   const history = useHistory();
   const { search } = location;
-
-  //console.log("qs:", queryString.parse(search));
+  const formData = queryString.parse(search);
 
   return (
     <div className="JSONSchema" style={{ padding: "1em", margin: "1em" }}>
       <Form
         schema={schema}
         uiSchema={uiSchema}
+        formData={formData}
         onChange={event => onChange(event, location, history)}
         //onChange={log("changed")}
         onSubmit={log("submitted")}

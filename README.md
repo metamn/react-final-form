@@ -121,3 +121,9 @@ The goal is to find / build / combine something which:
 - Cannot use proptypes for validations: https://github.com/jaredpalmer/formik/issues/1424 ... Yup is preferred ...
 - A very few examples only
 - An one man show
+
+## 4. Business logic is extendable
+
+### Query params support
+
+#### query-string
