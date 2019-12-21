@@ -8,9 +8,9 @@ The goal is to find / build / combine something which:
 
 1. Describes the form via JSON
 
-1.1 All input fields has to be supported
-1.2 Grouping and sub-grouping has to be supported
-1.3 Internationalization has to be supported
+1.1. All input fields has to be supported
+1.2. Grouping and sub-grouping has to be supported
+1.3. Internationalization has to be supported
 
 2. Auto generates the form fields using a theme (Material UI, Bootstrap, self made, etc.)
 
